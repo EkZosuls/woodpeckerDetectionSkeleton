@@ -46,7 +46,7 @@ digitalWrite(timingPin, HIGH);
       integrator = 0.0;  //integrator and wait for another burst of peck
 
   // turn off timing LED and pin
-digitalWrite(timingPin, HIGH);
+digitalWrite(timingPin, LOW);
   // tune this delay to set a reasonable sample rate
   delay(10);
 
