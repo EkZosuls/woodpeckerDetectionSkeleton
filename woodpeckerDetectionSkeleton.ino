@@ -38,6 +38,10 @@ digitalWrite(timingPin, HIGH);
   //accumulate to the integrator
     //sum integrator and bleed off some of the integration
         integrator = integrator + amplitude - integratorLeak;
+      if (integrator < 0){    //protect the integrator from going negative if there is lots of silence.
+              integrator = 0; 
+      }
+        
 
 
   // make a comparison to a threshold 
